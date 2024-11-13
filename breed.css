@@ -1,0 +1,15 @@
+@import url(style.css);
+
+.dog-profile img {
+  cursor: grabbing;
+}
+
+.article h2,
+.article h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.article p {
+  margin: 0 10%;
+  font-size: large;
+}
