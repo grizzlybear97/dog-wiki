@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  aside {
+    @apply mx-7 pt-16 py-8 flex flex-col;
+  }
+  h2 {
+    @apply text-5xl my-3;
+  }
+  h3 {
+    @apply text-3xl my-3;
+  }
+  p {
+    @apply text-xl inline;
+  }
+}
+
+@layer components {
+  .home_images {
+    @apply m-3 mx-14;
+  }
+  .dog-profile {
+    @apply w-[350px] m-4;
+  }
+  .dog-profile img {
+    @apply hover:cursor-pointer;
+  }
+  .dog-profile p {
+    @apply text-3xl;
+  }
+}
