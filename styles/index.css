@@ -6,7 +6,14 @@ a{
     text-decoration: none;
 }
 
+
 /* font sizes */
+h1,h2,a{
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 600;
+    font-style: normal;
+    color: black;
+}
 h1{
     font-size: 40px;
 }
@@ -14,25 +21,37 @@ h2{
     font-size: 30px;
 }
 h3{
-    font-size: 25px;
+    text-decoration: underline;
+    font-style: italic;
+    padding-left: 30px;
+    font-family: monospace;
+    font-size: 22px;
 }
 p{
+    font-family: "Gentium Plus", serif;
     font-size: 20px;
 }
 a{
     font-size: 25px;
 }
+a:hover{
+    background-color: yellow;
+}
+
+img{
+    padding: 25px
+}
 
 /* sticky styling */
 .sticky{
     position:sticky;
-    /* background-color: white; */
+    background-color: white;
     top: 0;
   }
   .main-links{
     position:sticky;
     background-color: white;
-    top: 110px;
+    top: 150px;
   }
 
 /* heading styling */
@@ -40,7 +59,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 50px;
     border-bottom: 2px solid black;
 
 }
@@ -52,8 +71,7 @@ header{
     display: flex;
 }
 .heading-title img{
-    width: 50px;
-    margin: 0 30px;
+    width: 120px;
 }
 .heading-links{
     display: flex;
@@ -76,7 +94,6 @@ main{
 }
 .main-links,
 .main-content{
-    /* border: 2px solid black; */
     padding: 30px 50px;
 }
 
@@ -87,4 +104,19 @@ main{
 }
 .main-links ul{
     margin-top: 30px;
+}
+
+
+/* content */
+.content-box--left{
+    display: flex;
+}
+.content-box--right{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.main-content > div {
+    /* border: 1px solid red; */
+    border-bottom: 1px solid black;
 }

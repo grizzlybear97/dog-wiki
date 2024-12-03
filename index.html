@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+
     <title>Home</title>
     <style>
 
@@ -29,7 +34,7 @@
         <!-- side quick links -->
         <div class="main-links">
           <ul>
-            <li><a href="#dogs">Dogs</a></li>
+            <li><a href="index.html">Dogs</a></li>
             <li><a href="#2">Taxonomy</a></li>
             <li><a href="#3">Anatomy and physiology</a></li>
             <li><a href="#4">Health</a></li>
@@ -40,46 +45,49 @@
 
       <!-- main content -->
       <div class="main-content">
-        <div id="dogs">
+        <div id="1">
           <h2>Dogs</h2>
-          <div>
+          <div class="content-box--left">
             <p>
               The dog (Canis familiaris or Canis lupus familiaris) is a
               domesticated descendant of the wolf. Also called the domestic dog,
               it is derived from the extinct Pleistocene wolf, the gray wolf is
               the dog's closest living relative. The dog was the first species
-              to be domesticated by humans. Experts estimate that
+              to be domesticated by humans.<span id="2"></span> Experts estimate that
               hunter-gatherers domesticated dogs more than 15,000 years ago,
               which was before the development of agriculture. Due to their long
               association with humans, dogs have expanded to a large number of
               domestic individuals and gained the ability to thrive on a
               starch-rich diet that would be inadequate for other canids.
             </p>
-            <imgsrc="/img/dog.jpg" alt="image of an dog" />
+            <img src="/img/dog.jpg" alt="image of an dog" />
           </div>
         </div>
         <div>
-          <h2 id="2">Taxonomy</h2>
-          <p>
-            In 1758, the Swedish botanist and zoologist Carl Linnaeus published
-            in his Systema Naturae, the two-word naming of species (binomial
-            nomene). Canis is the Latin word meaning "dog", and under this
-            genus, he listed the domestic dog, the wolf, and the golden jackal.
-            He fied the domestic dog as Canis familiaris and, on the next page,
-            fied the grey wolf as Canis lupus. Linnaeus considered the dog to be
-            a separate species from the wolf because of its upturning tail
-            (cauda recurvata in Latin term), which is not found in any other
-            canid.
-          </p>
-          <img
-            src="/img/pets.JPG"
-            alt="skeleton of a dog"
-          />
+          <h2>Taxonomy</h2>
+          <div  class="content-box--right">
+            <p>
+              In 1758, the Swedish botanist and zoologist Carl Linnaeus published
+              in his Systema Naturae, the two-word naming of species (binomial
+              nomene). Canis is the Latin word meaning "dog", and under this
+              genus, he listed the domestic dog, the wolf, and the golden jackal.
+              He fied the domestic dog as Canis familiaris and, on the next page,
+              fied the grey wolf as Canis lupus.<span id="3"></span> Linnaeus considered the dog to be
+              a separate species from the wolf because of its upturning tail
+              (cauda recurvata in Latin term), which is not found in any other
+              canid.
+            </p>
+            <img
+              src="/img/pets.JPG"
+              alt="skeleton of a dog"
+            />
+          </div>
         </div>
         <div>
-          <h2 id="3">Anatomy and physiology</h2>
+          <h2>Anatomy and physiology</h2>
           <div>
             <h3>Size and Skeleton</h3>
+            <div class="content-box--left">
             <p>
               Dogs are extremely variable in size, ranging from one the largest
               breeds, the great dane, at 50 to 79 kg (110 to 174 lb) and 71 to
@@ -98,7 +106,7 @@
             <img
               src="/img/skeleton.jpg"
               alt="skeleton of a dog"
-            />
+            /></div>
           </div>
           <div>
             <h3>Senses</h3>
@@ -117,7 +125,7 @@
               being familiar with dogs (as well as wolves) originating from
               colder climates, made up of a coarse guard hair and a soft down
               hair, or "single", with the topcoat only. Breeds may have an
-              occasional "blaze", stripe, or "star" of white fur on their chest
+              occasional "blaze", <span id="4"></span> stripe, or "star" of white fur on their chest
               or underside. Premature graying can occur in dogs as early as one
               year of age; this is associated with impulsive behaviors, anxiety
               behaviors, and fear of unfamiliar noise, people, or animals. Some
@@ -128,9 +136,10 @@
           </div>
         </div>
         <div>
-          <h2 id="4">Health</h2>
+          <h2>Health</h2>
           <div>
             <h3>Lifespan</h3>
+            <div class="content-box--right">
             <p>
               The typical lifespan of dogs varies widely among breeds, but the
               median longevity (the age at which half the dogs in a population
@@ -141,11 +150,12 @@
             </p>
             <img src="/img/health.jpg" alt="healthy dog" />
           </div>
+          </div>
           <div>
             <h3>Reproduction</h3>
             <p>
               In domestic dogs, sexual maturity happens around six months to one
-              year for both males and females, although this can be delayed
+              year for both <span id="5"></span>males and females, although this can be delayed
               until up to two years of age for some large breeds. This is the
               time at which female dogs will have their first estrous cycle,
               characterized by their vulvas swelling and producing discharges,
@@ -157,9 +167,10 @@
           </div>
         </div>
         <div>
-          <h2 id="5">Behavior</h2>
+          <h2>Behavior</h2>
+          <div class="content-box--left">
           <p>
-            og behavior is the internally coordinated responses (actions or
+            Dog behavior is the internally coordinated responses (actions or
             inactions) of the domestic dog (individuals or groups) to internal
             and external stimuli. Dogs' minds have been shaped by millennia of
             contact with humans. They have acquired the ability to understand
@@ -171,6 +182,7 @@
             skills.
           </p>
           <img src="/img/person.jpg" alt="dog and human" />
+        </div>
           <div>
             <h3>Nursing</h3>
             <p>
