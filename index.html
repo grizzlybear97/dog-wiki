@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/index.css">
     <title>Home</title>
+    <style>
+
+    </style>
   </head>
   <body>
 
-    <header>
+    <header class="sticky">
       <div class="heading-title">
         <img src="img/icon.svg">
         <h1><a href="index.html">doggo.wiki</a></h1>
@@ -22,20 +25,23 @@
     </header>
 
     <main>
-      <!-- side quick links -->
-      <div class="main-links">
-        <a href="#1">Dogs</a>
-        <a href="#2">Taxonomy</a>
-        <a href="#3">Anatomy and physiology</a>
-        <a href="#4">Health</a>
-        <a href="#5">Behavior</a>
-      </div>
-
+      <div>
+        <!-- side quick links -->
+        <div class="main-links">
+          <ul>
+            <li><a href="#dogs">Dogs</a></li>
+            <li><a href="#2">Taxonomy</a></li>
+            <li><a href="#3">Anatomy and physiology</a></li>
+            <li><a href="#4">Health</a></li>
+            <li><a href="#5">Behavior</a></li>
+          </ul>
+        </div>
+    </div>
 
       <!-- main content -->
       <div class="main-content">
-        <div>
-          <h2 id="1">Dogs</h2>
+        <div id="dogs">
+          <h2>Dogs</h2>
           <div>
             <p>
               The dog (Canis familiaris or Canis lupus familiaris) is a
@@ -221,5 +227,6 @@
         </div>
       </div>
     </main>
+
   </body>
 </html>
