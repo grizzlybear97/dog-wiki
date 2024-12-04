@@ -120,3 +120,27 @@ main{
     /* border: 1px solid red; */
     border-bottom: 1px solid black;
 }
+
+.content-section{
+    scroll-margin-top: 145px;
+}
+
+
+/* dogs.html styling */
+.dogs-content{
+    margin: 0 10px;
+}
+.scroll-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.scroll-links a{
+    font-size: 24px;
+}
+
+.breeds-links {
+    flex: 75;
+    border-left: 2px solid black;
+}
