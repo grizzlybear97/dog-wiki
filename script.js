@@ -38,7 +38,7 @@ function openTabs() {
 openTabs()
 */
 //display images and breed name
-let main = document.querySelector('main')
+let main = document.querySelector('.breeds-links')
 
 for (let i = 0; i <= DOG_URL.length; i++) {
   let data = await fetch(DOG_URL[i])
@@ -51,10 +51,10 @@ for (let i = 0; i <= DOG_URL.length; i++) {
 
   let dogName = allDogBreeds[i]
 
-  div.classList.add('dog-profile')
+  div.classList.add('breed-box')
   img.src = message
   img.addEventListener('click', () => {
-    //do something to show info
+    //open tab to show more info
     window.open(`breed.html?dog=${encodeURIComponent(dogName)}`, '_blank')
   })
 
