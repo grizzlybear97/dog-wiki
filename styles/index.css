@@ -8,7 +8,7 @@ a{
 
 
 /* font sizes */
-h1,h2,a{
+h1,h2,a,span{
     font-family: "Love Ya Like A Sister", cursive;
     font-weight: 600;
     font-style: normal;
@@ -157,4 +157,13 @@ header{
     text-align: center;
     margin-top: -15px;
     font-size: 24px;
+}
+.breads-section{
+    font-size: 35px;
+    width: 100%;
+    scroll-margin-top: 150px;
+}
+hr{
+    width: 100%;
+    border: 1px solid grey;
 }

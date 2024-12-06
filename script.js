@@ -5,6 +5,8 @@ let { message } = response
 
 const allDogBreeds = []
 const breedDiscriptions = []
+let dogLetter = 'abcdefghklmnoprstvw';
+let dogLetterIndex = 0;
 
 for (let breed in message) {
   allDogBreeds.push(breed)
@@ -26,21 +28,12 @@ for (let dog of allDogBreeds) {
     } */
   DOG_URL.push(randomDogImg1 + `${dog}` + randomDogImg2)
 }
-/*
-function openTabs() {
-  for (let i = 90; i <= allDogBreeds.length; i++) {
-    window.open(
-      `breed.html?dog=${encodeURIComponent(allDogBreeds[i])}`,
-      '_blank'
-    )
-  }
-}
-openTabs()
-*/
+
 //display images and breed name
 let main = document.querySelector('.breeds-links')
 
 for (let i = 0; i <= DOG_URL.length; i++) {
+//  for(let i = 0; i <= 15; i++){
   let data = await fetch(DOG_URL[i])
   let response = await data.json()
   let { message } = response
@@ -50,6 +43,21 @@ for (let i = 0; i <= DOG_URL.length; i++) {
   let p = document.createElement('p')
 
   let dogName = allDogBreeds[i]
+
+
+  if(dogName[0] === dogLetter[dogLetterIndex]){
+    let span = document.createElement('span');
+    let hr = document.createElement('hr');
+
+    span.classList.add('breads-section');
+    span.setAttribute('id', dogLetter[dogLetterIndex]);
+    span.textContent = `${dogLetter[dogLetterIndex]}`;
+
+    main.appendChild(span);
+    main.appendChild(hr);
+    console.log(dogName);
+    dogLetterIndex++;
+  }
 
   div.classList.add('breed-box')
   img.src = message
