@@ -137,26 +137,30 @@ header{
     flex-direction: column;
     position: sticky;
     top: 150px;
+    padding-left: 70px;
 
 }
 .scroll-links a{
-    font-size: 24px;
+    font-size: 30px;
 }
 
 .breeds-links{
     display: flex;
     flex-wrap: wrap;
     padding: 20px 170px;
+    margin: 0px 60px;
 }
 .breeds-links img{
     width: 300px;
     height: 300px;
     object-fit: cover;
+    cursor:pointer;
 }
 .breed-box p{
     text-align: center;
     margin-top: -15px;
     font-size: 24px;
+    cursor: pointer;
 }
 .breads-section{
     font-size: 35px;
@@ -164,6 +168,45 @@ header{
     scroll-margin-top: 150px;
 }
 hr{
+    margin-right: 100px;
     width: 100%;
     border: 1px solid grey;
+}
+
+
+/* breed.html styling */
+.breed-main {
+    display: flex;
+}
+.article, .main {
+    margin: 50px;
+}
+.article {
+    padding-left: 25px;
+    flex: 1;
+}
+.main{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+.dog-profile img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    cursor: grabbing;
+}
+
+.refresh-img {
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    border-style: none;
+    background-color: rgb(222, 222, 222);
+    cursor: pointer;
+}
+.refresh-img:hover {
+    background-color: yellow;
 }

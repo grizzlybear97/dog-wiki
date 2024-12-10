@@ -3,27 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doggo Wiki</title>
+    <link rel="stylesheet" href="styles/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+
+    <title>Breed Info</title>
+    <style>
+      .heading-links p:first-of-type{
+        background-color: yellow;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div class="heading">
-        <h1><a href="index.html">DOGS.COM</a></h1>
+    <header class="sticky">
+      <div class="heading-title">
+        <img src="img/icon.svg">
+        <h1><a href="index.html">doggo.wiki</a></h1>
       </div>
-      <div class="navbar">
-        <p><a href="dogs.html">WIKI</a></p>
-        <p><a href="fetch.html">GAME</a></p>
-        <p>ABOUT</p>
+
+      <div class="heading-links">
+        <p><a href="dogs.html">breeds</a></p>
+        <p><a href="fetch.html">quiz</a></p>
+        <p><a href="about.html">about</a></p>
       </div>
     </header>
-    <main class="main"></main>
 
-    <article class="article">
-      <h2 class="dogHeading"></h2>
-      <p class="description"></p>
-      <h3>History</h3>
-      <p class="history"></p>
-    </article>
+    <div class="breed-main">
+
+      <article class="article">
+        <h2 class="dogHeading"></h2>
+        <p class="description"></p>
+        <h2>history</h2>
+        <p class="history"></p>
+        <button class="refresh-img">Refresh Images..</button>
+      </article>
+
+      <main class="main"></main>
+
+    </div>
     <script type="module" src="breed.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+async function test() {
 //get the dog we wanna show info and fetch 3 images to showcase
 function getQuery(name) {
   const urlParams = new URLSearchParams(window.location.search)
@@ -5,7 +6,7 @@ function getQuery(name) {
 }
 
 const dog = getQuery('dog') /* 'husky' */
-const fetchURL = 'https://dog.ceo/api/breed/hound/images/random/5'
+const fetchURL = 'https://dog.ceo/api/breed/hound/images/random/4'
 const bruh = fetchURL.replace('hound', dog)
 
 const request = await fetch(bruh)
@@ -50,7 +51,7 @@ function updateContent() {
   description.innerText = getBreedDescription(dog)[0]
   history.innerText = getBreedDescription(dog)[1]
 }
-// grabWiki(dog)
+
 
 //breed descriptions to update content
 const dogBreeds = [
@@ -904,3 +905,17 @@ function getBreedDescription(breedName) {
 const breedToDescribe = dog // Replace with any breed to get its description
 
 updateContent()
+}
+
+test();
+// grabWiki(dog)
+const refreshButton = document.querySelector('.refresh-img');
+refreshButton.addEventListener('click', () => {
+  const allPrevDogs = document.querySelectorAll('.dog-profile');
+  for(let i = 0; i < allPrevDogs.length; i++) {
+    allPrevDogs[i].remove();
+  }
+  test();
+})
+
+document.body.style.overflow = 'hidden';
