@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en-US"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Doggo Fetch</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+
+    <title>Doggo quiz</title>
     <style>
         body {
-            margin: 1rem auto;
-            padding: 3rem;
+            /* padding: 3rem; */
             font-family: sans-serif;
         }
-        header {
+        .heading-links p:last-of-type{
+            background-color: yellow;
+        }
+        .main-content {
             width: 70%;
             margin: 1em auto;
+            border-bottom: 1px solid grey;
+            border-left: none;
         }
         main {
             max-width: 70%;
             margin: 0px auto;
-            display:flex; 
+            display:flex;
             flex-direction: column;
         }
         img {
-            max-width: 100%;
+            max-width: 500px;
         }
         #image-frame {
             font-size: x-large;
@@ -32,11 +42,13 @@
             text-align: center;
         }
         #options {
-            max-width: 100%;
+            margin: auto;
+            max-width: 50%;
             display: flex;
             flex-direction: column;
         }
         button {
+            width: 200px;
             padding: 0.5rem;
             font-size: medium;
             border-radius: 5px;
@@ -53,7 +65,18 @@
     </style>
   </head>
   <body>
-    <header>
+    <header class="sticky">
+        <div class="heading-title">
+          <img src="img/icon.svg">
+          <h1><a href="index.html">doggo.wiki</a></h1>
+        </div>
+
+        <div class="heading-links">
+          <p><a href="dogs.html">breeds</a></p>
+          <p><a href="fetch.html">quiz</a></p>
+        </div>
+    </header>
+    <header class="main-content">
     <h1>Guess the Doggo</h1>
     <p>What breed is the dog in this image?</p>
 
@@ -67,7 +90,7 @@
 
     </main>
 
-  
+
 
 
   <script type="module">
@@ -76,7 +99,7 @@
 
     const BREEDS = ["affenpinscher", "african", "airedale", "akita", "appenzeller", "shepherd australian", "basenji", "beagle", "bluetick", "borzoi", "bouvier", "boxer", "brabancon", "briard", "norwegian buhund", "boston bulldog", "english bulldog", "french bulldog", "staffordshire bullterrier", "australian cattledog", "chihuahua", "chow", "clumber", "cockapoo", "border collie", "coonhound", "cardigan corgi", "cotondetulear", "dachshund", "dalmatian", "great dane", "scottish deerhound", "dhole", "dingo", "doberman", "norwegian elkhound", "entlebucher", "eskimo", "lapphund finnish", "bichon frise", "germanshepherd", "italian greyhound", "groenendael", "havanese", "afghan hound", "basset hound", "blood hound", "english hound", "ibizan hound", "plott hound", "walker hound", "husky", "keeshond", "kelpie", "komondor", "kuvasz", "labradoodle", "labrador", "leonberg", "lhasa", "malamute", "malinois", "maltese", "bull mastiff", "english mastiff", "tibetan mastiff", "mexicanhairless", "mix", "bernese mountain", "swiss mountain", "newfoundland", "otterhound", "caucasian ovcharka", "papillon", "pekinese", "pembroke", "miniature pinscher", "pitbull", "german pointer", "germanlonghair pointer", "pomeranian", "medium poodle", "miniature poodle", "standard poodle", "toy poodle", "pug", "puggle", "pyrenees", "redbone", "chesapeake retriever", "curly retriever", "flatcoated retriever", "golden retriever", "rhodesian ridgeback", "rottweiler", "saluki", "samoyed", "schipperke", "giant schnauzer", "miniature schnauzer", "english setter", "gordon setter", "irish setter", "sharpei", "english sheepdog", "shetland sheepdog", "shiba", "shihtzu", "blenheim spaniel", "brittany spaniel", "cocker spaniel", "irish spaniel", "japanese spaniel", "sussex spaniel", "welsh spaniel", "english springer", "stbernard", "american terrier", "australian terrier", "bedlington terrier", "border terrier", "cairn terrier", "dandie terrier", "fox terrier", "irish terrier", "kerryblue terrier", "lakeland terrier", "norfolk terrier", "norwich terrier", "patterdale terrier", "russell terrier", "scottish terrier", "sealyham terrier", "silky terrier", "tibetan terrier", "toy terrier", "welsh terrier", "westhighland terrier", "wheaten terrier", "yorkshire terrier", "tervuren", "vizsla", "spanish waterdog", "weimaraner", "whippet", "irish wolfhound"];
 
-    
+
     // Utility function to get a randomly selected item from an array
     function getRandomElement(array) {
         const i = Math.floor(Math.random() * array.length);
@@ -107,7 +130,7 @@
         return shuffleArray(choices)
     }
 
-    
+
     // TODO 2
     // Given a URL such as "https://images.dog.ceo/breeds/poodle-standard/n02113799_2280.jpg"
     // return the breed name string as formatted in the breed list, e.g. "standard poodle"
@@ -127,7 +150,7 @@
 
 
     // TODO 3
-    // Given a URL, fetch the resource at that URL, 
+    // Given a URL, fetch the resource at that URL,
     // then parse the response as a JSON object,
     // finally return the "message" property of its body
     async function fetchMessage(url) {
@@ -167,7 +190,7 @@
             btn.addEventListener('click', buttonHandler)
             options.appendChild(btn)
         }
-        
+
     }
 
 
@@ -182,13 +205,13 @@
             frame.replaceChildren(image);
             renderButtons(choices, correctAnswer);
         })
-        
+
     }
 
     // Function to load the data needed to display the quiz
     async function loadQuizData() {
         document.getElementById("image-frame").textContent = "Fetching doggo...";
-        
+
         const doggoImgUrl = await fetchMessage(RANDOM_IMG_ENDPOINT);
         const correctBreed = getBreedFromURL(doggoImgUrl);
         const breedChoices = getMultipleChoices(3, correctBreed, BREEDS);
@@ -197,12 +220,12 @@
     }
 
     // TODO 5
-    // Asynchronously call the loadQuizData() function,     
-    // Then call renderQuiz() with the returned imageUrl, correctAnswer, and choices 
+    // Asynchronously call the loadQuizData() function,
+    // Then call renderQuiz() with the returned imageUrl, correctAnswer, and choices
     const quiz = await loadQuizData()
     let [url, breed, options] = quiz
     renderQuiz(url,breed,options)
-    
+
 
 
   </script>

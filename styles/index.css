@@ -31,6 +31,10 @@ p{
     font-family: "Gentium Plus", serif;
     font-size: 20px;
 }
+.dogs-info {
+    text-align: center;
+    font-style: italic;
+}
 a{
     font-size: 25px;
 }
@@ -59,7 +63,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 150px;
     border-bottom: 2px solid black;
 
 }
@@ -206,6 +210,8 @@ hr{
     border-style: none;
     background-color: rgb(222, 222, 222);
     cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid grey;
 }
 .refresh-img:hover {
     background-color: yellow;
