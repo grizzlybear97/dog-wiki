@@ -22,6 +22,7 @@
             margin: 1em auto;
             border-bottom: 1px solid grey;
             border-left: none;
+            padding: 0 30px;
         }
         main {
             max-width: 70%;
@@ -173,6 +174,9 @@
                 e.target.classList.add("incorrect");
                 document.querySelector(`button[value="${correctAnswer}"]`).classList.add("correct");
             }
+            setTimeout(function () {
+                location.reload();
+            }, 2000);
         }
 
         const options = document.getElementById("options"); // Container for the multiple-choice buttons
